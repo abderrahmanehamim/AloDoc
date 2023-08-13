@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #006D77;
+    --secondary1-color: #83C5BE;
+    --secondary2-color: #EDF6F9;
+    --secondary3-color: #FFDDD2;
+    --secondary4-color: #E29578;
+    --text-color:#090E1D;
+    --primary-font: Baloo Chettan , Bold;
+    --secondary-font: TT Hoves Pro Trial Variable , medium ;
+
+  }
