@@ -6,9 +6,17 @@
     --secondary3-color: #FFDDD2;
     --secondary4-color: #E29578;
     --text-color:#090E1D;
+    --shadow-color: #E29578;
     --primary-font: Baloo Chettan , Bold;
     --secondary-font: TT Hoves Pro Trial Variable , medium ;
 
+  }
+  button.primary {
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
