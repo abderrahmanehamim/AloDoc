@@ -10,3 +10,5 @@
     --secondary-font: TT Hoves Pro Trial Variable , medium ;
 
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
