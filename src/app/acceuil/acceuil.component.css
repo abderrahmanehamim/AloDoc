@@ -1,4 +1,30 @@
 .acceuil{
     height: 960px;
     background-color: #F9FBFC;
+    display: flex;
+}
+.rectangleacceuil1{
+    flex-shrink: 0;
+    width: 774px;
+    margin-top: 5%;
+    margin-left: 50%;
+    position:absolute;
+    height: 168px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
+
+}
+.rectangleacceuil4{
+
+width: 1323px;
+height: 93px;
+border-radius: 16px;
+
+    background: #FFF;
+    box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
+
+margin-top: 800px;
+margin-left: auto; /* Horizontally center the div */
+margin-right: auto; /* Horizontally center the div */
 }

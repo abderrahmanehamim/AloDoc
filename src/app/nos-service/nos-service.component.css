@@ -2,4 +2,28 @@
     height: 960px;
     display: flex;
     background-color: #F9FBFC;
+    justify-content: center; /* Center the content horizontally */
+}
+.rectanglecontainer {
+    margin-top: 300px;
+    display: flex;
+   
+    align-items: center; /* Center the items horizontally within the container */
+}
+.rectangle1,
+.rectangle2,
+.rectangle3 {
+
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
+
+    
+    width: 346px;
+    height: 443px;
+    margin-right: 122px; /* Add spacing after each rectangle except the last one */
+}
+
+.rectangle3 {
+    margin-right: 0; /* No spacing after the last rectangle */
 }

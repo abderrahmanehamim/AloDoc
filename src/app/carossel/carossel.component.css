@@ -4,17 +4,3 @@
   
     background-color: var(--secondary2-color);
 }
-.carosseltext{
-    margin-top: 48px;
-    margin-left: auto;
-    display: fixed;
-    justify-content: center;  
-  
-    color: var(--dark, #031432);
-    text-align: center;
-    font-family: Baloo Chettan;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;  
-}
