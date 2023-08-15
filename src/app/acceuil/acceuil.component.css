@@ -42,7 +42,8 @@ align-items: center; /* Center vertically */
     height: 40px;
     width: 150px;
     text-align: center;
-    font-family: Montserrat;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
     border-radius: 40px;
     border-style: hidden;
     outline: none;
