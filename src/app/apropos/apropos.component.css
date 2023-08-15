@@ -3,3 +3,10 @@
     display: flex;
     background-color: #F9FBFC;
 }
+.imgcontainer{
+    width: 500px;
+    height: 539px;
+    margin-top:450px;
+    position:absolute;
+    right:34px;
+}

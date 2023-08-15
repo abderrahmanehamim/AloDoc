@@ -14,3 +14,45 @@ background: #FFF;
 box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
 flex-shrink: 0;
 }
+.bgimg{
+    
+    width: 1100px;
+    height: 677px;
+    margin-top: 273px;
+    flex-shrink: 0;
+    background: url(/assets/Add%20User-cuate.svg), #F9FBFC 50% / contain no-repeat;
+    background-blend-mode: darken;
+}
+.textjoinus{
+    position: absolute;
+    width: 1121px;
+    height: 71px;
+    left: 65px;
+}
+.textjoinus,h2{
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #006D77;
+    
+}
+.contenu{
+    position: absolute;
+    color: var(--text-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    width: 357px;
+    height: 484px ;
+    margin-top: 150px;
+    left: 175px;
+
+}

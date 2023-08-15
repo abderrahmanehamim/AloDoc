@@ -2,13 +2,13 @@
     height: 960px;
     display: flex;
     background-color: #F9FBFC;
-    justify-content: center; /* Center the content horizontally */
+
 }
 .rectanglecontainer {
     margin-top: 300px;
     display: flex;
-   
-    align-items: center; /* Center the items horizontally within the container */
+    margin-left: auto; /* Horizontally center the div */
+    margin-right: auto; /* Horizontally center the div */
 }
 .rectangle1,
 .rectangle2,
