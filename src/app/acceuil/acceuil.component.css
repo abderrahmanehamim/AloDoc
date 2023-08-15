@@ -17,7 +17,6 @@
 
 }
 .rectangleacceuil4{
-
 width: 1323px;
 height: 93px;
 border-radius: 16px;
@@ -94,4 +93,35 @@ align-items: center; /* Center vertically */
     position:absolute;
     margin-top: 400px;
     right: 143px;
+  }
+  .acceuiltxt,h1{
+    position: absolute;
+    top: 230px ;
+    left: 65px;
+    width: 686px ;
+    height: 160px ;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: var(--primary-color);
+  }
+  .contenuacc{
+    position: absolute;
+    color: var(--text-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    width: 834px ;
+    height: 116px ;
+    
+    margin-top: 530px;
+    left: 130px;
   }
