@@ -5,20 +5,25 @@
 
 }
 .rectanglecontainer {
+    position: flex;
     margin-top: 300px;
     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     margin-left: auto; /* Horizontally center the div */
     margin-right: auto; /* Horizontally center the div */
 }
 .rectangle1,
 .rectangle2,
 .rectangle3 {
-
+    position: flex;
+    padding: 32px;
     border-radius: 16px;
     background: #FFF;
     box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
-
-    
+    gap: 24px;
+    flex-direction: column;
+    display: inline-flex;
     width: 346px;
     height: 443px;
     margin-right: 122px; /* Add spacing after each rectangle except the last one */
@@ -26,4 +31,98 @@
 
 .rectangle3 {
     margin-right: 0; /* No spacing after the last rectangle */
+}
+.videocall{
+
+    position: relative;
+    width: Hug (282px);
+    height: Hug (299px);
+    gap: 24px;
+}
+.ellipse1{
+    position: relative;
+width: 80px;
+height: 80px;
+flex-shrink: 0;
+
+}
+.icon1{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    top: 20px;
+    left: 20px;
+}
+.nosservicecontainer{
+    margin-top: 50px;
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+.nosservicetitle{
+    position: relative;
+    font-size: 40px;
+    width: 485px;
+    height: auto;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    color: var(--primary-color);
+    left: 65px;
+}
+.servicetitle{
+    position: flex;
+color: #396C7E;
+font-family: "Baloo Chettan 2" , sans-serif;
+font-weight: bold;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px; /* 87.5% */
+}
+.nosservicetxt{
+    position: flex;
+    position: relative;
+    width: 565px;
+    height: auto;
+    color: #090E1D;
+    font-family: "Sora",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+}
+.servicetxt{
+    position: flex;
+    color: #090E1D;
+    font-family: "Sora",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+.button {
+    height:56px;
+    width: 282px;
+    text-align: center;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    border-radius: 40px;
+    border-style: hidden;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.24);
+    margin-right: 245px;
+
+}
+.button-rdv{
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+.button-rdv:hover{
+    background-color:var(--secondary3-color);
+    color: #006d77;
 }

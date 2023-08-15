@@ -4,9 +4,45 @@
     background-color: #F9FBFC;
 }
 .imgcontainer{
-    width: 500px;
-    height: 539px;
-    margin-top:450px;
+    width: 700px;
+    height: 700px;
+    margin-top: 330px;
     position:absolute;
-    right:34px;
+    right:10px;
+}
+.apropostxt1{
+ position: absolute;
+     left: 65px;
+ font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: var(--primary-color);
+    width: 485px;
+    margin-top: 200px;
+}
+.apropostxt2 { 
+position: absolute; 
+color: var(--secondary4-color);
+left: 85px;
+margin-top: 300px;
+font-family: "Baloo Chettan 2" , sans-serif;
+font-weight: bold;
+font-size: 20px;
+}
+.aproposcontenu{
+position: absolute;
+width: 800px;
+height: 500px;
+color: #090E1D;
+font-family: "Sora",sans-serif;
+font-weight: 400;
+font-size: 16px;
+font-style: normal;
+line-height: 24px; /* 150% */
+left: 65px;
+margin-top: 400px;
 }

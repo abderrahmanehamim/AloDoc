@@ -4,3 +4,35 @@
   
     background-color: var(--secondary2-color);
 }
+.containerbox{
+    margin-left: auto; /* Horizontally center the div */
+    margin-right: auto; /* Horizontally center the div */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 24px;
+    width: 1024px;
+    height: 161px;
+}
+
+.titlecarossel{
+     position:absolute;
+    text-align: center;
+    color:var(--primary-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+}
+.imgbox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 68px;
+    margin-top: 150px;
+}
+.imgg{
+    width: 160px;
+    height: 60px;
+}
