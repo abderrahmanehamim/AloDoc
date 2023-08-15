@@ -6,8 +6,8 @@
 .rectangleacceuil1{
     flex-shrink: 0;
     width: 774px;
-    margin-top: 5%;
-    margin-left: 50%;
+    top: 200px;
+    right: 143px;
     position:absolute;
     height: 168px;
     border-radius: 16px;
@@ -27,4 +27,48 @@ border-radius: 16px;
 margin-top: 800px;
 margin-left: auto; /* Horizontally center the div */
 margin-right: auto; /* Horizontally center the div */
+}
+.btnconttainer{
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+
+    margin-top: 28px;
+}
+.button {
+    height: 40px;
+    width: 150px;
+    padding: 0;
+    text-align: center;
+    font-family: Montserrat;
+    vertical-align: middle;
+    border-radius: 40px;
+    border-style: hidden;
+    outline: none;
+    cursor: pointer;
+box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.24);
+
+
+}
+
+.button-Rechercher{
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    margin-left: 66px;
+}
+.button-Rechercher:hover{
+    background-color:var(--secondary3-color);
+    color: #006d77;
+}
+.button-Localisez{
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    margin-left: 900px;
+}
+.button-Localisez:hover{
+    background-color:var(--secondary3-color);
+    color: #006d77;
 }
