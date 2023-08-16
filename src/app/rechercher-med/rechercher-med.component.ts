@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./rechercher-med.component.css']
 })
 export class RechercherMedComponent {
-
+  Villes = ["casablanca","marrakech","asfi"];
 }

@@ -26,7 +26,9 @@
             ],
             "styles": [
               "src/custom-theme.scss",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+           "node_modules/@ng-select/ng-select/themes/default.theme.css"
             ],
             "scripts": []
           },

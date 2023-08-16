@@ -6,9 +6,16 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./profilemed.component.css']
 })
 export class ProfilemedComponent {
-  
-  profileForm = new FormGroup({
+    profilemedForm = new FormGroup({  
+    title: new FormControl(''),
     firstName: new FormControl(''),
     lastName: new FormControl(''),
+    ville: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    phoneCabinet:new FormControl(''),
+    phoneMobile: new FormControl(''),
+
+
   });
 }

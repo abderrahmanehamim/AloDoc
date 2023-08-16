@@ -18,7 +18,7 @@ import { RechercherMedComponent } from './rechercher-med/rechercher-med.componen
 import { MiniprofileComponent } from './miniprofile/miniprofile.component';
 import { ProfilemedComponent } from './profilemed/profilemed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +36,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RechercherMedComponent,
     MiniprofileComponent,
     ProfilemedComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
