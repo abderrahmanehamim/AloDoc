@@ -2,10 +2,11 @@
     width: 270px;
     height: 200px;
     background: #FFF;
-    border-radius: 30px;
+    border-radius: 16px;
     padding-bottom: 30px;
     margin-top: 463px;
     margin-left: 15px;
+    box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
 
   }
   .listing-heading {
@@ -70,3 +71,48 @@
     content: "\203A";
     margin-left: 5px;
   }
+  .rdv * {
+    box-sizing: border-box;
+  }
+  .rdv {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 76px;
+    margin-left: 62px;
+  }
+  .rendez-vous-confirmer {
+    color: #006d77;
+    text-align: center;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .rdvnbr * {
+    box-sizing: border-box;
+  }
+  .rdvnbr {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 138px;
+  }
+  .Rdvconfirmer {
+    color: #e29578;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    position: relative;
+    width: 50px;
+    height: 30px;
+  }
+  

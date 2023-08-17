@@ -1,5 +1,11 @@
 <section class="listing">
     <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+    <div class="rdv">
+      <div class="rendez-vous-confirmer">Rendez-vous :<br />confirmer</div>
+    </div>
+    <div class="rdvnbr">
+      <p class="Rdvconfirmer">{{housingLocation.Rdvconfirmer}}</p>
+    </div>
     <h2 class="listing-heading">{{ housingLocation.name }}</h2>
     <p class="listing-title">{{housingLocation.title }}</p>
     <div class="listing-content">
