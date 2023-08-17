@@ -1,10 +1,12 @@
 export interface Housinglocation {
     id: number;
     name: string;
+    specialite:string;
     city: string;
-    state: string;
+    title: string;
     photo: string;
-    availableUnits: number;
-    wifi: boolean;
-    laundry: boolean;
+    Rdvconfirmer: number;
+    cabinet: boolean;
+    adomicile: boolean;
+    videocall: boolean;
 }

@@ -19,6 +19,7 @@ import { MiniprofileComponent } from './miniprofile/miniprofile.component';
 import { ProfilemedComponent } from './profilemed/profilemed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HousingLocationComponent } from './housing-location/housing-location.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     LocalisezvousComponent,
     RechercherMedComponent,
     MiniprofileComponent,
-    ProfilemedComponent
+    ProfilemedComponent,
+    HousingLocationComponent
     
   ],
   imports: [

@@ -1,25 +1,66 @@
 .listing {
-    background: var(--accent-color);
+    width: 270px;
+    height: 200px;
+    background: #FFF;
     border-radius: 30px;
     padding-bottom: 30px;
+    margin-top: 463px;
+    margin-left: 15px;
+
   }
   .listing-heading {
-    color: var(--primary-color);
-    padding: 10px 20px 0 20px;
+    color: var(--text-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 25px ;
+    margin-left: 121px;
+    position: absolute;
   }
   .listing-photo {
-    height: 250px;
-    width: 100%;
+    position: absolute;
+    width: 41px;
+    height: 43px;
     object-fit: cover;
-    border-radius: 30px 30px 0 0;
+    margin-top: 25px;
+    margin-left: 32px;
+    border-radius: 43px;
+  }
+  .listing-title{
+    position: absolute;
+    color: var(--primary-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 25px ;
+    margin-left: 85px;
+    
   }
   .listing-location {
-    padding: 10px 20px 20px 20px;
+
+    position: absolute;
+    color: var(--text-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: normal;
+    letter-spacing: -0.15px;
   }
   .listing-location::before {
     content: url("/assets/location-pin.svg") / "";
   }
-  
+  .listing-content{
+    position: absolute ;
+    width: 200px;
+    height: 49px;
+    object-fit: cover;
+    margin-left: 32px;
+    margin-top:110px;
+  }
   section.listing a {
     padding-left: 20px;
     text-decoration: none;
