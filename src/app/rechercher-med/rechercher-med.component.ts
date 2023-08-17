@@ -10,7 +10,8 @@ export class RechercherMedComponent {
   Villes = ["casablanca","marrakech","asfi"];
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
   
-  housingLocation: Housinglocation = {
+  housingLocationList: Housinglocation [] = [
+    {
     id: 9999,
     name: 'Bennani Fatima',
     specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
@@ -21,5 +22,114 @@ export class RechercherMedComponent {
     cabinet: true,
     videocall: false,
     adomicile: false
-  };
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  },
+  {
+    id: 9999,
+    name: 'Bennani Fatima',
+    specialite: 'Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca',
+    city: 'casablanca',
+    title: 'Dr',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    Rdvconfirmer: 99,
+    cabinet: true,
+    videocall: false,
+    adomicile: false
+  }
+];
 }

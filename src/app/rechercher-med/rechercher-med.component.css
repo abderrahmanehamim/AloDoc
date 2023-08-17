@@ -1,8 +1,10 @@
+
+
 .content{
     background-color: #F9FBFC;
     display: flex;
-     min-height: 100em;
     width: auto;
+   
 }
 .rectanglerecherche {
     position: absolute;
@@ -35,4 +37,16 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .results {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns */
+    grid-auto-rows: auto; /* Infinite rows with auto height */
+    column-gap: 14px; /* Adjust the gap between columns */
+    row-gap: 14px; /* Adjust the gap between rows */
+    justify-content: space-between; /* Space between columns */
+    margin-top: 463px;
+    margin-bottom: 100px;
+  }
+ 

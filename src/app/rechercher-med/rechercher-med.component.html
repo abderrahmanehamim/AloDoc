@@ -2,21 +2,16 @@
     <section class="content">
           <section class="rectanglerecherche">
             <div>
-           <!--
-              <form>
-
-            <ng-select [items]="Villes" appendTo="body"  placeholder="choisir un ville"></ng-select>
-            <ng-select [items]="specialité" appendTo="body"  placeholder="choisir  une spécialité"></ng-select>
-
-        </form>
-        -->
             </div>
           </section>
           <div class="linerecherche">
           </div>
-          <section class="results">
-            <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-
-          </section>
+       
+            <div class="results">
+              <app-housing-location
+                *ngFor="let housingLocation of housingLocationList"
+                [housingLocation]="housingLocation"
+              ></app-housing-location>
+            </div>
     </section>
    
