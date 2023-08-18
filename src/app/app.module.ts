@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadernavbarComponent } from './headernavbar/headernavbar.component';
@@ -22,6 +22,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { HousingLocationComponent } from './housing-location/housing-location.component';
 @NgModule({
   declarations: [
+    
     AppComponent,
     HeadernavbarComponent,
     HomeComponent,
@@ -38,9 +39,10 @@ import { HousingLocationComponent } from './housing-location/housing-location.co
     MiniprofileComponent,
     ProfilemedComponent,
     HousingLocationComponent
-    
+  
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

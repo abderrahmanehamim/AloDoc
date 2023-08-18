@@ -4,7 +4,7 @@
     background-color: #F9FBFC;
     display: flex;
     width: auto;
-   
+    height: auto;
 }
 .rectanglerecherche {
     position: absolute;
