@@ -55,8 +55,8 @@
     justify-content: center;
   }
   .row {
-    display: inline-flex;
-    gap: 20px;
+    display: flex;
+    gap: 10px;
     align-items: center;
   }
   .select-box {
@@ -102,3 +102,7 @@
     width: 80%;
     
   }
+.selecttype{
+  width: 300 px;
+  grid-row-start: initial;
+}
