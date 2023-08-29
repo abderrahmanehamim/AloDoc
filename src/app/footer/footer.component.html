@@ -1,6 +1,8 @@
 <div class="footerhero">
-    <img class="logofooter" src="/assets/logo.png" alt="logo" aria-hidden="true">
-    <div class="alignbtnfooter">
+    <a [routerLink]="['/home']"> <!-- Add this clickable logo link -->
+        <img class="logofooter" src="/assets/logo.png" alt="logo" aria-hidden="true">
+    </a>
+        <div class="alignbtnfooter">
         <button class="button button-inscrire" [routerLink]="['/Inscription']">s’inscrire</button>
         <button class="button button-connecter" [routerLink]="['/Connexion']">se connecter</button>
     </div>

@@ -1,1 +1,24 @@
-<p>connexion works!</p>
+<div class="connexion">
+    <img class="logo" src="/assets/logo.png" alt="logo" aria-hidden="true">
+    <div class="bienvenue">
+        <h1>Bienvenue connectez-vous</h1>
+    </div>
+    <div class="login-container">
+        <form (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+          <div class="mb-3">
+    
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="email" required>
+            <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+          </div>
+          
+          <div class="mb-3">
+
+            <input type="password" id="password" name="password" class="form-control" placeholder="Entrer votre mot de pass" [(ngModel)]="password" required>
+            <div class="invalid-feedback">Veuillez entrer un mot de passe.</div>
+          </div>
+          
+          <button type="submit" class="connectez">Connectez-vous</button>
+        </form>
+  
+      
+</div>

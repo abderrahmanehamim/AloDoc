@@ -1,5 +1,7 @@
 <div class="navigation-header">
-<img class="img-7" src="/assets/logo.png" alt="logo" aria-hidden="true">
+  <a [routerLink]="['/home']"> <!-- Add this clickable logo link -->
+    <img class="img-7" src="/assets/logo.png" alt="logo" aria-hidden="true">
+  </a>
 <div class="txtheader">
     <a class="textheader" (click)="scrollTo('acceuil')" [routerLink]="['/home']">Acceuil</a>
     <a class="textheader" (click)="scrollTo('nos-service')"[routerLink]="['/home']">Nos Service</a>

@@ -1,0 +1,55 @@
+.connexion{
+    height: 1000px;
+    display: flex;
+    background-color: #F5F5F5;
+    
+}
+.bienvenue{
+    position: absolute;
+    width: 406.8196716308594px;
+    height: 70px;
+    margin-top: 190px;
+    right: 100px;
+
+}
+.bienvenue,h1{
+    color: #090E1D;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 45.767px;
+    font-style: normal;
+    line-height: 48.8px; /* 106.627% */
+}
+.logo{
+    width: 426px;
+    height: 231px;
+    margin-top: 86px;
+    margin-left: 100px;
+}
+.login-container{
+    position: absolute;
+    margin-top: 300px;
+    right: 80px;
+    padding: 20px;
+}
+.connectez{
+    height: 40px;
+    width: 370px;
+    text-align: center;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    border-radius: 14px;
+    border-style: hidden;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.24);
+    margin-right: 245px;
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+
+}
+.connectez:hover{
+    background-color:var(--secondary3-color);
+    color: #006d77;
+}
