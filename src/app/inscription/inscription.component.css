@@ -1,0 +1,107 @@
+.rejoigneznous{
+    height: 1000px;
+    display: flex;
+    background-color: #F9FBFC;
+}
+.lastrectangle{
+position:absolute;
+height: 700px;
+width: 622px;
+margin-top: 260px;
+right:34px;
+border-radius: 16px;
+background: #FFF;
+box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
+flex-shrink: 0;
+}
+.bgimg{
+    
+    width: 800px;
+    height: 600px;
+    margin-top: 273px;
+    flex-shrink: 0;
+    background: url(/assets/logo.png), #F9FBFC 50% / contain no-repeat;
+    background-blend-mode: darken;
+}
+.textjoinus{
+    position: absolute;
+    width: 1121px;
+    height: 71px;
+    left: 65px;
+}
+.textjoinus,h2{
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #006D77;
+    
+}
+.contenu{
+    position: absolute;
+    color: #090E1D;
+    font-family: "Sora",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    text-align: left;
+    width: 1000px;
+    height: 484px ;
+    margin-top: 90px;
+    left: 65px;
+
+}
+.registration-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+  
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    height: 40px;
+    width: 370px;
+    text-align: center;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    border-radius: 40px;
+    border-style: hidden;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.24);
+    margin-right: 245px;
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color:var(--secondary3-color);
+    color: #006d77;
+  }
+  

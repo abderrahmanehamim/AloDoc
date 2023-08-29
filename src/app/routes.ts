@@ -28,7 +28,7 @@ const routeConfig: Routes = [
         title: 'Rechercher Médecin page'
       },
       {
-        path: 'Connexion/',
+        path: 'Connexion',
         component: ConnexionComponent ,
         title: 'Connectez-vous'
       },

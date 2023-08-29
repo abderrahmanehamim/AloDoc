@@ -1,14 +1,14 @@
 <div class="navigation-header">
 <img class="img-7" src="/assets/logo.png" alt="logo" aria-hidden="true">
 <div class="txtheader">
-<a class="textheader" href="/acceuil">Acceuil</a>
-<a class="textheader" href="/nos-service">Nos Service</a>
-<a class="textheader" href="/a-propos">à propos</a>
-<a class="textheader" href="/rejoignez-nous">Rejoinez-nous</a>
-</div> 
+    <a class="textheader" (click)="scrollTo('acceuil')" [routerLink]="['/home']">Acceuil</a>
+    <a class="textheader" (click)="scrollTo('nos-service')"[routerLink]="['/home']">Nos Service</a>
+    <a class="textheader" (click)="scrollTo('apropos')" [routerLink]="['/home']">à propos</a>
+    <a class="textheader" (click)="scrollTo('rejoignez-nous')"[routerLink]="['/home']">Rejoinez-nous</a>
+  </div>
 <div class="alignbtnheader">
-        <button class="button button-inscrire">s’inscrire</button>
-        <button class="button button-connecter">se connecter</button>
+        <button class="button button-inscrire"[routerLink]="['/Inscription']">s’inscrire</button>
+        <button class="button button-connecter" [routerLink]="['/Connexion']">se connecter</button>
     </div>
 
 

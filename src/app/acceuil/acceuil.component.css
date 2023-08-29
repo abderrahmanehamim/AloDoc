@@ -14,6 +14,9 @@
     border-radius: 16px;
     background: #FFF;
     box-shadow: 0px 2px 20px 0px rgba(88, 126, 236, 0.15);
+    display: flex; /* Use flexbox to center vertically */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
 
 }
 .rectangleacceuil4{
@@ -126,3 +129,40 @@ align-items: center; /* Center vertically */
     margin-top: 530px;
     left: 130px;
   }
+  .statisticsection{
+    width: 597px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: auto; /* Horizontally center the div */
+    margin-right: auto; /* Horizontally center the div */
+  }
+  .statistic{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    width: auto;
+    height: 58px;
+    justify-content: center;
+    align-items: center;
+  }
+  .statistic-number{
+        color: #E29578;
+        font-family: "Baloo Chettan 2" , sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 126%; /* 45.36px */
+        letter-spacing: 5.04px;
+  }
+.statistic-title{
+    color: var(--text-color);
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 4.07px;
+    text-transform: uppercase;
+}

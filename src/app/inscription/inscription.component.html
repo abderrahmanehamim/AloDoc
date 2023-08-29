@@ -1,1 +1,52 @@
-<p>inscription works!</p>
+<main>
+<div class="rejoigneznous"> 
+    <div class="textjoinus">
+    <h2>Joignez notre Réseau des Patients</h2>
+    
+    </div>
+    <p class="contenu">Rejoignez notre réseau de patients et profitez d'une expérience médicale optimisée ! L'inscription en tant que patient vous ouvre les portes à une gamme d'avantages exclusifs. Consultez l'historique complet de vos rendez-vous avec les médecins, passés et à venir. Parcourez en détail les informations de chaque rendez-vous pour rester bien informé. Gérez aisément vos paiements en consultant votre historique financier, incluant les montants et les dates de paiement. De plus, partagez votre retour d'expérience en laissant des commentaires sur les médecins que vous avez consultés. Votre opinion compte et peut aider les autres membres de notre communauté à faire des choix éclairés.</p>
+    <div class="bgimg">
+    
+    </div>
+    <div class="lastrectangle"> 
+        <div class="registration-form">
+            <h2>Inscription</h2>
+            <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
+              <div class="form-group">
+                <label for="firstName">Prénom</label>
+                <input type="text" id="firstName" name="firstName" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Nom</label>
+                <input type="text" id="lastName" name="lastName" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="age">Âge</label>
+                <input type="number" id="age" name="age" ngModel required>
+              </div>
+              <div class="form-group">
+                <label>Sexe</label>
+                <select name="gender" ngModel required>
+                  <option value="male">Homme</option>
+                  <option value="female">Femme</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Numéro de téléphone</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" ngModel required>
+              </div>
+              <button type="submit">S'inscrire</button>
+            </form>
+          </div>
+    </div>
+    </div>
+</main>
