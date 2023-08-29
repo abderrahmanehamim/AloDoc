@@ -26,6 +26,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
+import routeConfig from './routes';
 @NgModule({
   declarations: [
   
@@ -50,7 +51,7 @@ import {MatChipsModule} from '@angular/material/chips';
   imports: [
     MatChipsModule,
     NgFor,
-    RouterModule,
+    RouterModule.forRoot(routeConfig),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

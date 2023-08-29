@@ -1,15 +1,18 @@
 <main>
-  <a [routerLink]="['/']">
-
-
-  <app-headernavbar></app-headernavbar>
-
+  <header>
+    <app-headernavbar></app-headernavbar>
+    </header>
+  <a [routerLink]="['/home']">
+   
 </a>
+
   <section >
-  <!--   <app-home></app-home>-->
-  <app-rechercher-med></app-rechercher-med>
+    <router-outlet></router-outlet>
+ 
   </section>
 
+  <footer>
     <app-footer></app-footer>
+    </footer>
 
 </main>
