@@ -11,7 +11,7 @@
     <div class="listing-content">
     <p class="listing-location">{{ housingLocation.specialite}}</p>
     <div class="btnconttainer">
-      <button class="button button-profile">afficher profile</button>
+      <button class="button button-profile" [routerLink]="['/profilemed', housingLocation.id]" >afficher profile</button>
     </div>
     </div>
   </section>

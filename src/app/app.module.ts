@@ -1,4 +1,6 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -49,7 +51,8 @@ import routeConfig from './routes';
     HousingLocationComponent
   
   ],
-  imports: [
+  imports: [  
+    MbscModule, 
     MatChipsModule,
     NgFor,
     RouterModule.forRoot(routeConfig),

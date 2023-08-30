@@ -6,7 +6,11 @@ export interface Housinglocation {
     title: string;
     photo: string;
     Rdvconfirmer: number;
+    actes:string[];
     cabinet: boolean;
     adomicile: boolean;
     videocall: boolean;
+    adresse: string;
+    numtele: string;
+    numcabinet: string;
 }
