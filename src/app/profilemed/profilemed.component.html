@@ -1,15 +1,49 @@
 <main>
  <div class="Profilecontent">
     <section class="infopersonnel">
+            <h1 class="infopersonnel-title">Information Personnel</h1>
+
+            <img class="infopersonnel-photo" [src]="housingLocation?.photo" alt="Image de Profile  de {{housingLocation?.name}}">
+
+            <h3 class="infopersonnel-rdvnumber"></h3>
+            <h2 class="infopersonnel-name">{{housingLocation?.title }},{{ housingLocation?.name }}</h2>
+
+            <p class="infopersonnel-specialité">{{ housingLocation?.specialite}}</p>
+
+             <div class="infopersonnel-acces">
+             </div>
     </section>
     <div class="line"></div>
     <section class="indicationdetails">
+        <h1 class="indicationdetails-title">Indications / Détail Accès</h1>
+        <div  class="indicationdetails-description">
+            <div class="row">
+                <div class="cell">
+                  {{housingLocation?.adresse}}
+                </div>
+                <div class="cell">
+                  {{housingLocation?.city}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell">
+                  {{housingLocation?.numtele}}
+                </div>
+                <div class="cell">
+                  {{housingLocation?.numcabinet}}
+                </div>
+              </div>
+            </div>
+
     </section>
     <div class="line2"></div>
     <section class="actes">
+    <h1 class="indicationdetails-title">Soins et actes</h1>   
+    
     </section>
     <div class="line3"></div>
     <section class=" calendar">
+    <h1 class="indicationdetails-title">Prendre RDV en Cabinet</h1>   
 <!--
         <mbsc-page>
             <mbsc-datepicker
