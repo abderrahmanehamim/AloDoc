@@ -66,7 +66,7 @@
     margin-bottom: 50px;
     left: 131px;
 }
-.calendar{
+.commentaires{
     position: relative;
     width: 969px;
     height: 400px;
@@ -102,12 +102,12 @@
 
     margin-inline: 5px;
 }
-.button-connecter {
+.button-rdv {
     background-color: #ffffff;
     color: #006d77;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.button-connecter:hover {
+.button-rdv:hover {
     background-color: #006d77;
     color: #ffffff;
 }
@@ -198,4 +198,23 @@
     display: table-cell;
     padding: 5px;
     border: 1px solid #ccc;
+  }
+  .button-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(88px, 2fr)); /* Max 6 colonnes, largeur minimale de 88px */
+    grid-gap: 30px; /* Espacement entre les boutons */
+    max-width: 700px; /* Largeur maximale de la grille */
+   
+  }
+  
+  .button-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .actepadding{
+    position: absolute;
+    margin-top: 57px ;
+    margin-left: 51px;
   }

@@ -38,12 +38,20 @@
     </section>
     <div class="line2"></div>
     <section class="actes">
-    <h1 class="indicationdetails-title">Soins et actes</h1>   
-    
+      <h1 class="indicationdetails-title">Soins et actes</h1>
+      <div class="actepadding">
+      <div class="button-grid">
+        <div class="button-item" *ngFor="let acte of housingLocation?.actes; let i = index">
+          <a class="badge badge-secondary p-2 mb-1" href="{{ acte }}" style="min-width: 88px; height: 43px; font-size: 0.9em; background-color: #006D77;">
+            {{ acte }}
+          </a>
+        </div>
+      </div>
+    </div>
     </section>
     <div class="line3"></div>
-    <section class=" calendar">
-    <h1 class="indicationdetails-title">Prendre RDV en Cabinet</h1>   
+    <section class="commentaires">
+    <h1 class="indicationdetails-title">commentaires</h1>   
 <!--
         <mbsc-page>
             <mbsc-datepicker
