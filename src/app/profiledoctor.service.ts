@@ -11,7 +11,9 @@ export class ProfiledoctorService {
     const randomNumber = Math.floor(Math.random() * 1000); // You can adjust the range as needed
     return `${this.baseUrl2}?random=${randomNumber}`;
   }
-
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
+  }
   DoctorprofileList: Housinglocation [] = [
     {
       id: 1,

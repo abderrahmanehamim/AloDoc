@@ -21,6 +21,18 @@ export class ProfilemedComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   profiledoctorService = inject(ProfiledoctorService);
   housingLocation: Housinglocation | undefined;
+  applyForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl('')
+  });
+  submitApplication() {
+    this.profiledoctorService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? ''
+    );
+  }
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
     this.housingLocation = this.profiledoctorService.getProfileById(housingLocationId);

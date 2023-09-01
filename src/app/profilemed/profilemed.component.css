@@ -79,17 +79,17 @@
     padding: 5px; 
 
 }
-.alignbtnprofile {
+.rdvprofile {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     position: absolute;
-    top: 10px;
-    right: 55px;
+    top: 200px;
+    right: 62px;
 }
-.button {
-    height: 40px;
-    width: 130px;
+.rdv {
+    height: 60px;
+    width: 275px;
     padding: 0;
     text-align: center;
     font-family: "Baloo Chettan 2" , sans-serif;
@@ -99,17 +99,17 @@
     border-style: hidden;
     outline: none;
     cursor: pointer;
-
     margin-inline: 5px;
 }
-.button-rdv {
-    background-color: #ffffff;
-    color: #006d77;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.button-rdv:hover {
+.rdv {
     background-color: #006d77;
     color: #ffffff;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.rdv:hover {
+   background-color: var(--secondary4-color);
+   color: #ffffff;
 }
 
 .infopersonnel-title{
