@@ -55,3 +55,25 @@ flex-shrink: 0;
     left: 65px;
 
 }
+.btn-custom {
+    height: 40px;
+    width: 130px;
+    padding: 0;
+    text-align: center;
+    font-family: "Baloo Chettan 2" , sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    border-radius: 6px;
+    border-style: hidden;
+    outline: none;
+    cursor: pointer;
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Custom button hover effect */
+  .btn-custom:hover {
+    background-color:var(--secondary3-color);
+    color: #006d77;
+  }

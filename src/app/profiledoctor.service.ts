@@ -8,7 +8,7 @@ export class ProfiledoctorService {
   readonly baseUrl2 = 'https://picsum.photos/200/300';
   
   generateRandomImage() {
-    const randomNumber = Math.floor(Math.random() * 1000); // You can adjust the range as needed
+    const randomNumber = Math.floor(Math.random() * 1000); 
     return `${this.baseUrl2}?random=${randomNumber}`;
   }
   submitApplication(firstName: string, lastName: string, email: string, appointmentDate: string, appointmentTime: string) {

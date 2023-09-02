@@ -8,7 +8,81 @@
 <div class="bgimg">
 
 </div>
-<div class="lastrectangle"> 
+<div class="lastrectangle text-center p-4">
+ <form class="text-center p-4">
+    <div class="mb-3">
+      <input type="text" class="form-control form-control-sm" placeholder="Nom Complet" [(ngModel)]="doctor.name" name="name" required>
+    </div>
 
+    <div class="mb-3">
+      <select class="form-select form-select-sm" placeholder="Speciality" [(ngModel)]="doctor.specialite" name="specialite" required>
+          <option value="" disabled selected>Choisir votre Spécialité</option>
+          <option *ngFor="let specialty of specialiteOptions" [value]="specialty">{{ specialty }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+     <select class="form-select form-select-sm" [(ngModel)]="doctor.city" name="city" required>
+       <option value="" disabled selected>Choisir votre Ville</option>
+       <option *ngFor="let city of cityOptions" [value]="city">{{ city }}</option>
+     </select>
+   </div>
+    <div class="mb-3">
+      <select class="form-select form-select-sm" placeholder="Title" [(ngModel)]="doctor.title" name="title" required>
+          <option value="" disabled selected>Choisir votre Titre Professeur/Docteur</option>
+          <option value="Dr">Dr</option>
+        <option value="Pr">Pr</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <input type="file" class="form-control form-control-sm" placeholder="Upload Photo" name="photo">
+    </div>
+
+    <div class="mb-3">
+     <input
+       type="text"
+       class="form-control form-control-sm"
+       placeholder="List of Actes (Max 6)"
+       [(ngModel)]="newActe"
+       (keydown.enter)="addActe()"
+     >
+   </div>
+   <div class="mb-3">
+     <div class="actes-list">
+       <span *ngFor="let acte of doctor.actes; let last = last">
+         {{ acte }}<span *ngIf="!last">, </span>
+       </span>
+     </div>
+</div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control form-control-sm" placeholder="Address" [(ngModel)]="doctor.adresse" name="adresse" required>
+    </div>
+
+    <div class="mb-3">
+      <input type="tel" class="form-control form-control-sm" placeholder="Phone Number" [(ngModel)]="doctor.numtele" name="numtele" required>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control form-control-sm" placeholder="Cabinet Number" [(ngModel)]="doctor.numcabinet" name="numcabinet">
+    </div>
+
+    <div class="mb-3 form-check d-flex justify-content-between">
+     <div>
+       <input type="checkbox" class="form-check-input" id="cabinet" [(ngModel)]="doctor.cabinet" name="cabinet">
+       <label class="form-check-label" for="cabinet">Cabinet</label>
+     </div>
+     <div class="ms-2">
+       <input type="checkbox" class="form-check-input" id="adomicile" [(ngModel)]="doctor.adomicile" name="adomicile">
+       <label class="form-check-label" for="adomicile">Adomicile</label>
+     </div>
+     <div class="ms-1">
+          <input type="checkbox" class="form-check-input" id="videocall" [(ngModel)]="doctor.videocall" name="videocall">
+          <label class="form-check-label" for="videocall">Video Call</label>
+        </div>
+   </div>
+   <button type="submit" class="btn btn-custom btn-sm">S'inscrire</button>
+ </form>
 </div>
 </div>
