@@ -24,13 +24,17 @@ export class ProfilemedComponent {
   applyForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    email: new FormControl('')
+    email: new FormControl(''),
+    appointmentDate: new FormControl(''),
+    appointmentTime: new FormControl(''),
   });
   submitApplication() {
     this.profiledoctorService.submitApplication(
       this.applyForm.value.firstName ?? '',
       this.applyForm.value.lastName ?? '',
-      this.applyForm.value.email ?? ''
+      this.applyForm.value.email ?? '',
+      this.applyForm.value.appointmentDate ?? '',
+      this.applyForm.value.appointmentTime ?? ''
     );
   }
   constructor() {

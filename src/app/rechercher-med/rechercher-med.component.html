@@ -4,45 +4,26 @@
             <div class="container">
               <div class="row">
                 <div class="select-box">
-                  <form class="example-form">
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Spécialité</mat-label>
-                      <input type="text"
-                             placeholder="Chercher Une Spécialité"
-                             aria-label="Spécialité"
-                             matInput
-                             [formControl]="myControl"
-                             [matAutocomplete]="auto">
-                      <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let option of options" [value]="option">
-                          {{option}}
-                        </mat-option>
-                      </mat-autocomplete>
-                    </mat-form-field>
-                  </form>
+
+                  <input type="text" class="form-control" placeholder="Filtrer par spécialité" #filter>
+
                 </div>
                 <div class="select-box">
 
                 </div>
                 <div class="select-box">
-                  <div class="selecttype">
-                    <mat-chip-listbox aria-label="Fish selection">
-                      <mat-chip-option>Au cabinet</mat-chip-option>
-                      <mat-chip-option>En video</mat-chip-option>
-                      <mat-chip-option>A domicile</mat-chip-option>
-                    </mat-chip-listbox>
-                </div>
+
               </div>
-                <button class="button">Rechercher</button>
+                <button class="button" (click)="filterResults(filter.value)">Rechercher</button>
               </div>
             </div>
           </section>
           <div class="linerecherche">
           </div>
-       
+
             <div class="results">
               <app-housing-location
-                *ngFor="let housingLocation of DoctorprofileList"
+                *ngFor="let housingLocation of filteredprofileList"
                 [housingLocation]="housingLocation"
               ></app-housing-location>
             </div>

@@ -68,38 +68,51 @@
     Réservez-Rdv
   </button>
   <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <section class="listing-apply">
-          <h2 class="section-heading">Prendre Un Rendez-Vous</h2>
-          <form [formGroup]="applyForm" (submit)="submitApplication()">
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" formControlName="firstName">
-    
-            <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" formControlName="lastName">
-    
-            <label for="email">Email</label>
-            <input id="email" type="email" formControlName="email">
-            <button type="submit" class="rdv primary">Prendre Un Rendez-Vous</button>
-          </form>
-        </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-primary">Confirmer</button>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{housingLocation?.title }},{{housingLocation?.name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <section class="listing-apply">
+            <h4 class="section-heading">{{ housingLocation?.title }},{{ housingLocation?.name }} vous confirmera votre rendez-vous dès que possible</h4>
+
+            <form [formGroup]="applyForm" (submit)="submitApplication()">
+              <input id="first-name" type="text" formControlName="firstName" placeholder="Nom" class="form-control mb-2">
+              <input id="last-name" type="text" formControlName="lastName" placeholder="Prénom" class="form-control mb-2">
+              <input id="email" type="email" formControlName="email" placeholder="Email" class="form-control mb-2">
+              
+              <!-- Date Input -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Date</span>
+                </div>
+                <input type="date" formControlName="appointmentDate" class="form-control">
+              </div>
+              
+              <!-- Time Input -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Heure</span>
+                </div>
+                <input type="time" formControlName="appointmentTime" class="form-control">
+              </div>
+              
+              <button type="submit" class="rdv primary">Confirmer le Rendez-Vous</button>
+            </form>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 
 </div>
