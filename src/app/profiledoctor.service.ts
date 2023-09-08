@@ -30,8 +30,8 @@ export class ProfiledoctorService {
       photo: this.generateRandomImage(),
       Rdvconfirmer: Math.floor(Math.random() * 100),
       actes: [
-        'Acte 1',
-        'Acte 2',
+        'amine',
+        'abdo',
         'Acte 3',
         'Acte 4',
         'Acte 5',

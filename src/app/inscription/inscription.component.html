@@ -13,36 +13,30 @@
             <h2>Inscription</h2>
             <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
               <div class="form-group">
-                <label for="firstName">Prénom</label>
-                <input type="text" id="firstName" name="firstName" ngModel required>
+                <input type="text" id="firstName" name="firstName" placeholder="Prénom" ngModel required>
               </div>
               <div class="form-group">
-                <label for="lastName">Nom</label>
-                <input type="text" id="lastName" name="lastName" ngModel required>
+                <input type="text" id="lastName" name="lastName" placeholder="Nom" ngModel required>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" ngModel required>
+                <input type="email" id="email" name="email" placeholder="Email" ngModel required>
               </div>
               <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" ngModel required>
+                <input type="password" id="password" name="password" placeholder="Mot de pass" ngModel required>
               </div>
               <div class="form-group">
-                <label for="age">Âge</label>
-                <input type="number" id="age" name="age" ngModel required>
+                <input type="number" id="age" name="age" placeholder="Age" ngModel required>
               </div>
               <div class="form-group">
-                <label>Sexe</label>
                 <select name="gender" ngModel required>
+                  <option value="" disabled selected>Sexe</option>
                   <option value="male">Homme</option>
                   <option value="female">Femme</option>
                   <option value="other">Autre</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="phoneNumber">Numéro de téléphone</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" ngModel required>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Numéro de téléphone" ngModel required>
               </div>
               <button type="submit">S'inscrire</button>
             </form>
