@@ -1,0 +1,11 @@
+{
+  "name": "alodocbackend",
+  "version": "1.0.0",
+  "description": "Node Api for Alodoc Version 1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abderrahmane Hamim",
+  "license": "ISC"
+}
