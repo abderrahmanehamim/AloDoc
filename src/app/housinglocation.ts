@@ -5,7 +5,6 @@ export interface Housinglocation {
     city: string;
     title: string;
     photo: string;
-    Rdvconfirmer: number;
     actes:string[];
     cabinet: boolean;
     adomicile: boolean;

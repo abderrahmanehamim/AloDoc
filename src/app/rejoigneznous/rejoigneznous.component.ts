@@ -13,7 +13,6 @@ export class RejoigneznousComponent {
     city: '',
     title: '',
     photo: '',
-    Rdvconfirmer: 0,
     actes: [],
     cabinet: false,
     adomicile: false,

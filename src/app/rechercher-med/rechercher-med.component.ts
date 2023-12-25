@@ -16,10 +16,13 @@ export class RechercherMedComponent {
   filteredprofileList: Housinglocation[] = [];
   DoctorprofileList: Housinglocation[] = [];
   profiledoctorService: ProfiledoctorService = inject(ProfiledoctorService);
-  constructor(){
-    this.DoctorprofileList = this.profiledoctorService.getAllProfile();
-    this.filteredprofileList = this.DoctorprofileList;
+  constructor() {
+    this.profiledoctorService.getAllProfile().then((housingLocationList: Housinglocation[]) => {
+      this.DoctorprofileList = housingLocationList;
+      this.filteredprofileList = housingLocationList;
+    });
   }
+  
   filterResults(text: string) {
     if (!text) {
       this.filteredprofileList = this.DoctorprofileList;

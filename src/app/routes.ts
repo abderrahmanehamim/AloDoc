@@ -5,11 +5,15 @@ import { ProfilemedComponent } from './profilemed/profilemed.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LocalisezvousComponent } from './localisezvous/localisezvous.component';
+import { AllDoctorsComponent } from './AdminComponent/all-doctors/all-doctors.component';
+import { AppointmentsComponent } from './AdminComponent/appointments/appointments.component';
+import { DashboardComponent } from './AdminComponent/dashboard/dashboard.component';
+import { PatientsComponent } from './AdminComponent/patients/patients.component';
 
 const routeConfig: Routes = [
   {
     path: '',
-    redirectTo: 'home', // Redirect empty path to the 'home' route
+    redirectTo: 'Connexion', // Redirect empty path to the 'home' route
     pathMatch: 'full'
   },
     {
@@ -41,6 +45,30 @@ const routeConfig: Routes = [
         path: 'localisation',
         component: LocalisezvousComponent ,
         title: 'Localisez-vous'
+      },
+      {
+        path: 'admin/dashboard',
+        component: DashboardComponent,
+        title: 'adminsdashboard'
+
+      },
+      {
+        path: 'admin/doctors',
+        component: AllDoctorsComponent,
+        title: 'adminalldoctor'
+
+      },
+      {
+        path: 'admin/appointments',
+        component: AppointmentsComponent,
+        title: 'adminallappointments'
+
+      },
+      {
+        path: 'admin/patients',
+        component: PatientsComponent,
+        title: 'adminallpatients'
+
       },
   ];
 

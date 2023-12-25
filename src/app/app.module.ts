@@ -29,6 +29,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import routeConfig from './routes';
+import { DashboardComponent } from './AdminComponent/dashboard/dashboard.component';
+import { AllDoctorsComponent } from './AdminComponent/all-doctors/all-doctors.component';
+import { AppointmentsComponent } from './AdminComponent/appointments/appointments.component';
+import { PatientsComponent } from './AdminComponent/patients/patients.component';
+
+import { MyPatientsComponent } from './DoctorsComponent/my-patients/my-patients.component';
+import { SettingsComponent } from './DoctorsComponent/settings/settings.component';
+import { MyBookingsComponent } from './PatientComponent/my-bookings/my-bookings.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +57,16 @@ import routeConfig from './routes';
     RechercherMedComponent,
     MiniprofileComponent,
     ProfilemedComponent,
-    HousingLocationComponent
+    HousingLocationComponent,
+    DashboardComponent,
+    AllDoctorsComponent,
+    AppointmentsComponent,
+    PatientsComponent,
+   
+    MyPatientsComponent,
+    SettingsComponent,
+    MyBookingsComponent,
+ 
   
   ],
   imports: [  
