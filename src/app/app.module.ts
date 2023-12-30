@@ -29,6 +29,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import routeConfig from './routes';
+import { PatientProfileComponent } from './patient-profile/patient-profile.component';
+import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { PatientChangePasswordComponent } from './patient-change-password/patient-change-password.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,12 @@ import routeConfig from './routes';
     RechercherMedComponent,
     MiniprofileComponent,
     ProfilemedComponent,
-    HousingLocationComponent
+    HousingLocationComponent,
+    PatientProfileComponent,
+    DoctorProfileComponent,
+    PatientDashboardComponent,
+    ProfileSettingsComponent,
+    PatientChangePasswordComponent
   
   ],
   imports: [  
