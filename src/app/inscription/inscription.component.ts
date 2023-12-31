@@ -15,6 +15,7 @@ export class InscriptionComponent {
     email: '',
     password: '',
     age: 0,
+    adresse:'' ,
     gender: '',
     phoneNumber: ''
   }; // Objet pour stocker les données du formulaire

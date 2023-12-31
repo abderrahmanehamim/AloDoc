@@ -29,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import routeConfig from './routes';
+
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
@@ -38,6 +39,7 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
 import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appointments.component';
 import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
 import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-c
     MiniprofileComponent,
     ProfilemedComponent,
     HousingLocationComponent,
+
     PatientProfileComponent,
     DoctorProfileComponent,
     PatientDashboardComponent,
@@ -67,6 +70,7 @@ import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-c
     DoctorAppointmentsComponent,
     DoctorSettingsComponent,
     DoctorChangePasswordComponent
+
   
   ],
   imports: [  

@@ -5,6 +5,7 @@ import { ProfilemedComponent } from './profilemed/profilemed.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LocalisezvousComponent } from './localisezvous/localisezvous.component';
+
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
@@ -16,10 +17,11 @@ import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appoin
 import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
 import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
 
+
 const routeConfig: Routes = [
   {
     path: '',
-    redirectTo: 'home', // Redirect empty path to the 'home' route
+    redirectTo: 'Connexion', // Redirect empty path to the 'home' route
     pathMatch: 'full'
   },
     {
@@ -53,6 +55,7 @@ const routeConfig: Routes = [
         title: 'Localisez-vous'
       },
       {
+
         path: 'patient',
         component: PatientProfileComponent ,
         title: 'patientprofile'
@@ -101,6 +104,7 @@ const routeConfig: Routes = [
         path: 'Doctorchangepassword',
         component: DoctorChangePasswordComponent ,
         title: 'DoctorChangepassword'
+
       },
   ];
 

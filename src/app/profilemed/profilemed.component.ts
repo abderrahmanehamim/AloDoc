@@ -25,6 +25,7 @@ export class ProfilemedComponent {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
+    Phonenumber: new FormControl(''),
     appointmentDate: new FormControl(''),
     appointmentTime: new FormControl(''),
   });
@@ -33,13 +34,19 @@ export class ProfilemedComponent {
       this.applyForm.value.firstName ?? '',
       this.applyForm.value.lastName ?? '',
       this.applyForm.value.email ?? '',
+      this.applyForm.value.Phonenumber ?? '',
       this.applyForm.value.appointmentDate ?? '',
-      this.applyForm.value.appointmentTime ?? ''
-    );
+      this.applyForm.value.appointmentTime ?? '');
   }
   constructor() {
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.profiledoctorService.getProfileById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
+  }
+  /*constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
     this.housingLocation = this.profiledoctorService.getProfileById(housingLocationId);
   }
-
+*/
 }

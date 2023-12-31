@@ -1,0 +1,193 @@
+{
+    "Doctors": [
+        {
+          "id": 1,
+          "name": "Bennani Fatima",
+          "specialite": "Dentiste, Esthétique dentaire, Endodontiste, Orthodontiste, Pédodontiste à Casablanca",
+          "city": "Casablanca",
+          "title": "Dr",
+          "photo": "path/to/doctor1.jpg",
+          "actes": [
+            "Abcès dentaire",
+            "Appareil dentaire",
+            "Bilan bucco-dentaire",
+            "Blanchiment Dentaire",
+            "Blanchiment au laser"
+          ],
+          "cabinet": true,
+          "videocall": false,
+          "adomicile": false,
+          "adresse": "134 Angle Bd Bir Anzarane Et Rue Ahmed El Joumari",
+          "numtele": "0522253511",
+          "numcabinet": "Aya Appart, N°5 - 2ème étage"
+        },
+        {
+          "id": 2,
+          "name": "El Amrani Karim",
+          "specialite": "Cardiologue, Échocardiographie, Cardiologie interventionnelle à Rabat",
+          "city": "Rabat",
+          "title": "Dr",
+          "photo": "path/to/doctor2.jpg",
+          "actes": [
+            "Consultation cardiologique",
+            "Électrocardiogramme (ECG)",
+            "Échographie cardiaque",
+            "Coronarographie",
+            "Angioplastie"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": false,
+          "adresse": "77 Avenue Hassan II",
+          "numtele": "0537859642",
+          "numcabinet": "Clinique Cardiaque Maroc"
+        },
+        {
+          "id": 3,
+          "name": "Zahraoui Ahmed",
+          "specialite": "Gynécologue, Obstétricien, Échographie pelvienne à Marrakech",
+          "city": "Marrakech",
+          "title": "Dr",
+          "photo": "path/to/doctor3.jpg",
+          "actes": [
+            "Consultation gynécologique",
+            "Échographie obstétricale",
+            "Suivi de grossesse",
+            "Accouchement",
+            "Césarienne"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": true,
+          "adresse": "22 Rue Ibn Toumart",
+          "numtele": "0529887412",
+          "numcabinet": "Cabinet Médical Al Ward"
+        },
+        {
+          "id": 4,
+          "name": "Hamdi Noura",
+          "specialite": "Ophtalmologue, Chirurgie de la cataracte, Réfraction à Fes",
+          "city": "Fes",
+          "title": "Dr",
+          "photo": "path/to/doctor4.jpg",
+          "actes": [
+            "Consultation ophtalmologique",
+            "Examen de la vue",
+            "Chirurgie de la cataracte",
+            "Traitement du glaucome",
+            "Laser oculaire"
+          ],
+          "cabinet": true,
+          "videocall": false,
+          "adomicile": false,
+          "adresse": "15 Avenue Hassan II",
+          "numtele": "0535748963",
+          "numcabinet": "Centre Ophtalmologique Al Noor"
+        },
+        {
+          "id": 5,
+          "name": "Chakir Ali",
+          "specialite": "Dermatologue, Chirurgie dermatologique, Dermatologie esthétique à Tangier",
+          "city": "Tangier",
+          "title": "Dr",
+          "photo": "path/to/doctor5.jpg",
+          "actes": [
+            "Consultation dermatologique",
+            "Chirurgie dermatologique",
+            "Traitement des verrues",
+            "Botox et fillers",
+            "Peeling"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": false,
+          "adresse": "8 Rue Ibn Batouta",
+          "numtele": "0530927451",
+          "numcabinet": "Cabinet Dermatologique Elite"
+        },
+        {
+          "id": 6,
+          "name": "Saidi Hicham",
+          "specialite": "Orthopédiste, Chirurgie du genou, Traumatologie à Agadir",
+          "city": "Agadir",
+          "title": "Dr",
+          "photo": "path/to/doctor6.jpg",
+          "actes": [
+            "Consultation orthopédique",
+            "Chirurgie du genou",
+            "Fractures et entorses",
+            "Arthroscopie",
+            "Rééducation"
+          ],
+          "cabinet": true,
+          "videocall": false,
+          "adomicile": true,
+          "adresse": "30 Avenue Hassan II",
+          "numtele": "0524389647",
+          "numcabinet": "Centre Orthopédique Al Madina"
+        },
+        {
+          "id": 7,
+          "name": "Tazi Leila",
+          "specialite": "Neurologue, Électromyographie, Neurologie pédiatrique à Oujda",
+          "city": "Oujda",
+          "title": "Dr",
+          "photo": "path/to/doctor7.jpg",
+          "actes": [
+            "Consultation neurologique",
+            "Électromyographie",
+            "Neurologie pédiatrique",
+            "Sclérose en plaques",
+            "Migraines"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": false,
+          "adresse": "12 Rue Mohammed V",
+          "numtele": "0536718236",
+          "numcabinet": "Clinique Neurologique Maghreb"
+        },
+        {
+          "id": 8,
+          "name": "Bouhaddioui Rachid",
+          "specialite": "Psychiatre, Psychothérapie, Troubles anxieux à Casablanca",
+          "city": "Casablanca",
+          "title": "Dr",
+          "photo": "path/to/doctor8.jpg",
+          "actes": [
+            "Consultation psychiatrique",
+            "Psychothérapie",
+            "Dépression",
+            "Troubles anxieux",
+            "Troubles du sommeil"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": false,
+          "adresse": "18 Rue Abdellah Ben Yassine",
+          "numtele": "0522793846",
+          "numcabinet": "Centre Psychiatrique Al Mawahib"
+        },
+        {
+          "id": 9,
+          "name": "Farah Anas",
+          "specialite": "Chirurgien plastique, Rhinoplastie, Liposuccion à Marrakech",
+          "city": "Marrakech",
+          "title": "Dr",
+          "photo": "path/to/doctor9.jpg",
+          "actes": [
+            "Consultation de chirurgie plastique",
+            "Rhinoplastie",
+            "Liposuccion",
+            "Augmentation mammaire",
+            "Lifting du visage"
+          ],
+          "cabinet": true,
+          "videocall": true,
+          "adomicile": false,
+          "adresse": "25 Rue Abdelkrim El Khattabi",
+          "numtele": "0529183645",
+          "numcabinet": "Clinique de Chirurgie Esthétique Belleza"
+        }
+      ]
+    }      
