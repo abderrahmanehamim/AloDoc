@@ -34,6 +34,10 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { PatientChangePasswordComponent } from './patient-change-password/patient-change-password.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appointments.component';
+import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
+import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +62,11 @@ import { PatientChangePasswordComponent } from './patient-change-password/patien
     DoctorProfileComponent,
     PatientDashboardComponent,
     ProfileSettingsComponent,
-    PatientChangePasswordComponent
+    PatientChangePasswordComponent,
+    DoctorDashboardComponent,
+    DoctorAppointmentsComponent,
+    DoctorSettingsComponent,
+    DoctorChangePasswordComponent
   
   ],
   imports: [  

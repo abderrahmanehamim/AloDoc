@@ -11,6 +11,10 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { DashboardAdminComponent } from 'projects/alodocbackendui/src/app/dashboard-admin/dashboard-admin.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { PatientChangePasswordComponent } from './patient-change-password/patient-change-password.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appointments.component';
+import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
+import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
 
 const routeConfig: Routes = [
   {
@@ -77,6 +81,26 @@ const routeConfig: Routes = [
         path: 'Patientchangepassword',
         component: PatientChangePasswordComponent ,
         title: 'Patientchangepassword'
+      },
+      {
+        path: 'DoctorDashboard',
+        component: DoctorDashboardComponent ,
+        title: 'DoctorDashboard'
+      },
+      {
+        path: 'DoctorAppointment',
+        component: DoctorAppointmentsComponent ,
+        title: 'DoctorAppointment'
+      },
+      {
+        path: 'DoctorSettings',
+        component: DoctorSettingsComponent ,
+        title: 'DoctorSettings'
+      },
+      {
+        path: 'Doctorchangepassword',
+        component: DoctorChangePasswordComponent ,
+        title: 'DoctorChangepassword'
       },
   ];
 
