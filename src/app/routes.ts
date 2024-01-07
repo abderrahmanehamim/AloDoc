@@ -16,18 +16,51 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
 import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appointments.component';
 import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
 import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
-
+import { DataDisplayComponent } from './data-display/data-display.component';
+import { DoctorCreateComponent } from './doctor-create/doctor-create.component';
+import { PatientListComponent } from './patient-list/patient-list.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { AppointmentFormComponent } from './appointment-form/appointment-form.component';
 
 const routeConfig: Routes = [
   {
     path: '',
-    redirectTo: 'Connexion', // Redirect empty path to the 'home' route
+    redirectTo: 'home', // Redirect empty path to the 'home' route
     pathMatch: 'full'
   },
     {
       path: 'home',
       component: HomeComponent,
       title: 'Home page'
+    },
+    {
+      path: 'appointmenttable',
+      component: AppointmentListComponent ,
+      title: 'appointmenttable'
+
+    },
+    {
+      path: 'patienttable',
+      component: PatientListComponent ,
+      title: 'patienttable'
+
+    },
+    {
+      path: 'doctortable',
+      component: DataDisplayComponent ,
+      title: 'doctortable'
+
+    },
+    {
+      path: 'doctorcreate',
+      component: DoctorCreateComponent ,
+      title: 'doctorcreate'
+
+    },
+    {
+      path: 'appointmentcreate',
+      component: AppointmentFormComponent,
+      title: 'appointmentcreate'
     },
     {
       path: 'profilemed/:id',
@@ -86,7 +119,7 @@ const routeConfig: Routes = [
         title: 'Patientchangepassword'
       },
       {
-        path: 'DoctorDashboard',
+        path: 'DoctorDashboard/:id',
         component: DoctorDashboardComponent ,
         title: 'DoctorDashboard'
       },
@@ -106,6 +139,7 @@ const routeConfig: Routes = [
         title: 'DoctorChangepassword'
 
       },
+      
   ];
 
   export default routeConfig;

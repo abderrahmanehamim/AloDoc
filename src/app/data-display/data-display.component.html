@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Data Display</h1>
+
+  <div *ngIf="loading">Loading data...</div>
+  <div *ngIf="error">Error fetching data.</div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Doctors</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Speciality</th>
+            <th>City</th>
+            <th>Title</th>
+            <th>Phone Number</th>
+            <th>Actes</th>
+            <th>Action</th> <!-- New column for delete button -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctor of doctors">
+            <td>{{ doctor.idDoctor }}</td>
+            <td>{{ doctor.name }}</td>
+            <td>{{ doctor.specialite }}</td>
+            <td>{{ doctor.city }}</td>
+            <td>{{ doctor.title }}</td>
+            <td>{{ doctor.numtele }}</td>
+            <td>{{ doctor.actes.join(', ') }}</td>
+            <td>
+              <button (click)="deleteDoctor(doctor.idDoctor)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,11 @@
 import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import {  HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { HeadernavbarComponent } from './headernavbar/headernavbar.component';
 import { HomeComponent } from './home/home.component';
@@ -29,7 +31,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import routeConfig from './routes';
-
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
@@ -39,6 +40,17 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
 import { DoctorAppointmentsComponent } from './doctor-appointments/doctor-appointments.component';
 import { DoctorSettingsComponent } from './doctor-settings/doctor-settings.component';
 import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-change-password.component';
+import { DataDisplayComponent } from './data-display/data-display.component';
+
+import { DoctorService } from './doctor.service';
+import { PatientService } from './patient.service';
+import { AppointmentService } from './appointment.service';
+import { DatapatientdisplayComponent } from './datapatientdisplay/datapatientdisplay.component';
+import { DoctorCreateComponent } from './doctor-create/doctor-create.component';
+import { PatientListComponent } from './patient-list/patient-list.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { AppointmentFormComponent } from './appointment-form/appointment-form.component';
+
 
 
 @NgModule({
@@ -60,7 +72,6 @@ import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-c
     MiniprofileComponent,
     ProfilemedComponent,
     HousingLocationComponent,
-
     PatientProfileComponent,
     DoctorProfileComponent,
     PatientDashboardComponent,
@@ -69,9 +80,13 @@ import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-c
     DoctorDashboardComponent,
     DoctorAppointmentsComponent,
     DoctorSettingsComponent,
-    DoctorChangePasswordComponent
-
-  
+    DoctorChangePasswordComponent,
+    DataDisplayComponent,
+    DatapatientdisplayComponent,
+    DoctorCreateComponent,
+    PatientListComponent,
+    AppointmentListComponent,
+    AppointmentFormComponent
   ],
   imports: [  
     MbscModule, 
@@ -79,16 +94,21 @@ import { DoctorChangePasswordComponent } from './doctor-change-password/doctor-c
     NgFor,
     RouterModule.forRoot(routeConfig),
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     NgSelectModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [
+    DoctorService,
+    PatientService,
+    AppointmentService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

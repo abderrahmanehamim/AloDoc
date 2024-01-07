@@ -1,0 +1,33 @@
+<!-- appointment-list.component.html -->
+
+<div class="container mt-4">
+    <h2>Appointments List</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Acceptance</th>
+          <th>Doctor Name</th>
+          <th>Patient Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.idappoint }}</td>
+          <td>{{ appointment.dateappoint | date:'mediumDate' }}</td>
+          <td>{{ parseTime(appointment.timeappoint) }}</td>
+          <td>{{ appointment.acceptance }}</td>
+          <td>{{ appointment.doctor?.name || 'N/A' }}</td>
+          <td>{{ appointment.patient?.firstname + ' ' + appointment.patient?.lastname || 'N/A' }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteAppointment(appointment.idappoint)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

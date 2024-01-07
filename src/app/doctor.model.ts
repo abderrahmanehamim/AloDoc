@@ -1,6 +1,6 @@
 import { Appointment } from "./appointment.model";
-export interface Housinglocation {
-    id: number;
+export interface Doctor {
+    idDoctor: number;
     name: string;
     email: string;
     password: string;
@@ -15,5 +15,5 @@ export interface Housinglocation {
     adresse: string;
     numtele: string;
     numcabinet: string;
-    appointments: Appointment
-}
+    appointments: Appointment[];
+  }

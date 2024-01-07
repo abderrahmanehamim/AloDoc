@@ -1,5 +1,6 @@
 import { Component ,  Input } from '@angular/core';
 import { Housinglocation } from '../housinglocation';
+import { Doctor } from '../doctor.model';
 
 @Component({
   selector: 'app-housing-location',
@@ -8,5 +9,6 @@ import { Housinglocation } from '../housinglocation';
 })
 export class HousingLocationComponent {
   @Input() housingLocation!: Housinglocation;
+  
 
 }

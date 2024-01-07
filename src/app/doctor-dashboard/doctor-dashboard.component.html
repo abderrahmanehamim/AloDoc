@@ -10,7 +10,7 @@
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
 		
-			
+		
 			
 			<!-- Breadcrumb -->
 			<div class="breadcrumb-bar">
@@ -42,13 +42,13 @@
 								<div class="widget-profile pro-widget-content">
 									<div class="profile-info-widget">
 										<a href="#" class="booking-doc-img">
-											<img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+											<img src="doctor?.photo" alt="Image de Profile de {{doctor?.name}}">
 										</a>
 										<div class="profile-det-info">
-											<h3>Dr. Darren Elder</h3>
+											<h3>{{doctor?.title}},{{doctor?.name}}</h3>
 											
 											<div class="patient-details">
-												<h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+												<h5 class="mb-0">{{doctor?.specialite}}</h5>
 											</div>
 										</div>
 									</div>
@@ -102,39 +102,8 @@
 								<div class="col-md-12">
 									<div class="card dash-card">
 										<div class="card-body">
-											<div class="row">
-												<div class="col-md-12 col-lg-4">
-													<div class="dash-widget dct-border-rht">
-														<div class="circle-bar circle-bar1">
-															<div class="circle-graph1" data-percent="75">
-																<img src="assets/img/icon-01.png" class="img-fluid" alt="patient">
-															</div>
-														</div>
-														<div class="dash-widget-info">
-															<h6>Total Patient</h6>
-															<h3>1500</h3>
+											
 												
-														</div>
-													</div>
-												</div>
-												
-												
-												
-												<div class="col-md-12 col-lg-4">
-													<div class="dash-widget">
-														<div class="circle-bar circle-bar3">
-															<div class="circle-graph3" data-percent="50">
-																<img src="assets/img/icon-03.png" class="img-fluid" alt="Patient">
-															</div>
-														</div>
-														<div class="dash-widget-info">
-															<h6>Appoinments</h6>
-															<h3>85</h3>
-														
-														</div>
-													</div>
-												</div>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -149,53 +118,45 @@
 										
 										<div class="tab-content">
 										
-											<!-- Upcoming Appointment Tab -->
-											<div class="tab-pane show active" id="upcoming-appointments">
-												<div class="card card-table mb-0">
-													<div class="card-body">
-														<div class="table-responsive">
-															<table class="table table-hover table-center mb-0">
-																<thead>
-																	<tr>
-																		<th>Patient Name</th>
-																		<th>Appt Date</th>
-																
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr>
-																		<td>
-																			<h2 class="table-avatar">
-																			
-																				<a href="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
-																			</h2>
-																		</td>
-																		<td>11 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-																		
-																		<td class="text-right">
-																			<div class="table-action">
-																				
-																				
-																				<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-																					<i class="fas fa-check"></i> Accept
-																				</a>
-																				<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-																					<i class="fas fa-times"></i> Cancel
-																				</a>
-																			</div>
-																		</td>
-																	</tr>
-																	
-																	
-																	
-																</tbody>
-															</table>		
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- /Upcoming Appointment Tab -->
-									   
+					<!-- Upcoming Appointment Tab -->
+<div class="tab-pane show active" id="upcoming-appointments">
+    <div class="card card-table mb-0">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-center mb-0">
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Appt Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let appointment of appointments">
+                            <td>
+                                <h2 class="table-avatar">
+                                    <a href="patient-profile.html">{{appointment.patient.name}}</a>
+                                </h2>
+                            </td>
+                            <td>{{appointment.dateappoint | date:'mediumDate'}}, {{appointment.timeappoint | date:'shortTime'}}</td>
+                            <td class="text-right">
+                                <div class="table-action">
+                                    <button *ngIf="appointment.acceptance !== 'accepted'" class="btn btn-sm bg-success-light" (click)="acceptAppointment(appointment.idappoint)">
+                                        <i class="fas fa-check"></i> Accept
+                                    </button>
+                                    <button *ngIf="appointment.acceptance !== 'refused'" class="btn btn-sm bg-danger-light" (click)="refuseAppointment(appointment.idappoint)">
+                                        <i class="fas fa-times"></i> Refuse
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Upcoming Appointment Tab -->
 											
 											
 										</div>

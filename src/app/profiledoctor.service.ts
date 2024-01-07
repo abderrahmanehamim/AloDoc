@@ -15,7 +15,7 @@ export class ProfiledoctorService {
       Appointment Time: ${appointmentTime}`);
 
   }
-  url = 'http://localhost:3000/doctors';
+  url = 'http://localhost:3000/doctor';
  /* getAllProfile(): Housinglocation[] {
     return this.DoctorprofileList;
   }
