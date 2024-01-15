@@ -1,8 +1,5 @@
 <div class="container">
-  <h1>Data Display</h1>
-
-  <div *ngIf="loading">Loading data...</div>
-  <div *ngIf="error">Error fetching data.</div>
+  
 
   <div class="row">
     <div class="col-md-6">
@@ -17,7 +14,8 @@
             <th>Title</th>
             <th>Phone Number</th>
             <th>Actes</th>
-            <th>Action</th> <!-- New column for delete button -->
+            <th>Action</th> 
+            <th>DoctorDashboard</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +30,9 @@
             <td>
               <button (click)="deleteDoctor(doctor.idDoctor)">Delete</button>
             </td>
+            <td>
+              <button class="btn btn-info btn-sm" [routerLink]="['/DoctorDashboard', doctor.idDoctor]" >afficher profile</button>
+           </td>
           </tr>
         </tbody>
       </table>

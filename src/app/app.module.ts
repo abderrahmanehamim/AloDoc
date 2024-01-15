@@ -50,6 +50,8 @@ import { DoctorCreateComponent } from './doctor-create/doctor-create.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { AppointmentFormComponent } from './appointment-form/appointment-form.component';
+import { MinidoctorviewComponent } from './minidoctorview/minidoctorview.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 
 
@@ -86,7 +88,9 @@ import { AppointmentFormComponent } from './appointment-form/appointment-form.co
     DoctorCreateComponent,
     PatientListComponent,
     AppointmentListComponent,
-    AppointmentFormComponent
+    AppointmentFormComponent,
+    MinidoctorviewComponent,
+    AdminpanelComponent
   ],
   imports: [  
     MbscModule, 

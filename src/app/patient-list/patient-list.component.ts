@@ -25,14 +25,15 @@ export class PatientListComponent implements OnInit {
   }
 
   deletePatient(id: number) {
-    if (id) {
-      this.patientService.deletePatient(id).subscribe(
-        () => {
-          console.log('Patient deleted successfully');
-          this.loadPatients();
-        },
-        error => console.error('Error deleting patient:', error)
-      );
-    }
+    console.log('Deleting patient with id:', id);
+    this.patientService.deletePatient(id).subscribe(
+      () => {
+        console.log('Patient deleted successfully');
+        // Manually update the patient list without calling loadPatients()
+        this.patients = this.patients?.filter(patient => patient.idpatient !== id);
+      },
+      error => console.error('Error deleting patient:', error)
+    );
   }
+
 }

@@ -1,7 +1,4 @@
-// appointment-form.component.ts
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { AppointmentService } from '../appointment.service';
 import { DoctorService } from '../doctor.service';
 import { PatientService } from '../patient.service';
@@ -15,28 +12,20 @@ import { Appointment } from '../appointment.model';
   styleUrls: ['./appointment-form.component.css']
 })
 export class AppointmentFormComponent implements OnInit {
-  appointmentForm!: FormGroup; // Add ! to declare it as possibly undefined
-
+  dateappoint!: Date;
+  timeappoint!: string;
+  selectedDoctorId: number = 0; 
+  selectedPatientId: number = 0; 
   doctors: Doctor[] = [];
   patients: Patient[] = [];
 
   constructor(
-    private formBuilder: FormBuilder,
     private appointmentService: AppointmentService,
-    private doctorService: DoctorService, // Add doctorService injection
-    private patientService: PatientService, // Add patientService injection
-    private route: ActivatedRoute
+    private doctorService: DoctorService,
+    private patientService: PatientService
   ) {}
-  ngOnInit(): void {
-    this.appointmentForm = this.formBuilder.group({
-      dateappoint: ['', Validators.required],
-      timeappoint: ['', Validators.required],
-      acceptance: ['', Validators.required],
-      doctorId: ['', Validators.required],
-      patientId: ['', Validators.required]
-    });
 
-    // Fetch doctors and patients for dropdowns
+  ngOnInit(): void {
     this.doctorService.getAllDoctors().subscribe(doctors => {
       this.doctors = doctors;
     });
@@ -47,15 +36,27 @@ export class AppointmentFormComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.appointmentForm.valid) {
-      const newAppointment: Appointment = this.appointmentForm.value;
-      this.appointmentService.createAppointment(newAppointment).subscribe(
-        () => {
-          console.log('Appointment created successfully');
-          // Redirect or perform any other action after creating appointment
+    if (this.selectedDoctorId && this.selectedPatientId) {
+      const scheduleData = {
+        patientId: this.selectedPatientId,
+        doctorId: this.selectedDoctorId,
+        date: this.dateappoint,
+        time: this.timeappoint
+      };
+  
+      this.appointmentService.scheduleAppointment(scheduleData).subscribe(
+        (data: any) => {
+          console.log('Appointment scheduled successfully:', data);
+          
         },
-        error => console.error('Error creating appointment:', error)
+        (error) => {
+          console.error('Error scheduling appointment:', error);
+          
+        }
       );
+    } else {
+      console.log('Please select a doctor and a patient before submitting.');
+     
     }
   }
 }

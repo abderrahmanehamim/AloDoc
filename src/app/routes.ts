@@ -21,6 +21,7 @@ import { DoctorCreateComponent } from './doctor-create/doctor-create.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { AppointmentFormComponent } from './appointment-form/appointment-form.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 const routeConfig: Routes = [
   {
@@ -32,6 +33,12 @@ const routeConfig: Routes = [
       path: 'home',
       component: HomeComponent,
       title: 'Home page'
+    },
+    {
+      path: 'adminpanel',
+      component: AdminpanelComponent ,
+      title: 'adminpanel'
+
     },
     {
       path: 'appointmenttable',
@@ -94,7 +101,7 @@ const routeConfig: Routes = [
         title: 'patientprofile'
       },
       {
-        path: 'patientDashboard',
+        path: 'patientDashboard/:id',
         component: PatientDashboardComponent ,
         title: 'patientDashboard'
       },

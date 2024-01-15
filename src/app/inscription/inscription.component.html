@@ -1,49 +1,53 @@
 <main>
-<div class="rejoigneznous"> 
+  <div class="rejoigneznous"> 
     <div class="textjoinus">
-    <h2>Joignez notre Réseau des Patients</h2>
-    
+      <h2>Joignez notre Réseau des Patients</h2>
     </div>
-    <p class="contenu">Rejoignez notre réseau de patients et profitez d'une expérience médicale optimisée ! L'inscription en tant que patient vous ouvre les portes à une gamme d'avantages exclusifs. Consultez l'historique complet de vos rendez-vous avec les médecins, passés et à venir. Parcourez en détail les informations de chaque rendez-vous pour rester bien informé. Gérez aisément vos paiements en consultant votre historique financier, incluant les montants et les dates de paiement. De plus, partagez votre retour d'expérience en laissant des commentaires sur les médecins que vous avez consultés. Votre opinion compte et peut aider les autres membres de notre communauté à faire des choix éclairés.</p>
-    <div class="bgimg">
-    
-    </div>
+    <p class="contenu">
+      Rejoignez notre réseau de patients et profitez d'une expérience médicale optimisée ! L'inscription en tant que patient vous ouvre les portes à une gamme d'avantages exclusifs. Consultez l'historique complet de vos rendez-vous avec les médecins, passés et à venir. Parcourez en détail les informations de chaque rendez-vous pour rester bien informé. Gérez aisément vos paiements en consultant votre historique financier, incluant les montants et les dates de paiement. De plus, partagez votre retour d'expérience en laissant des commentaires sur les médecins que vous avez consultés. Votre opinion compte et peut aider les autres membres de notre communauté à faire des choix éclairés.
+    </p>
+    <div class="bgimg"></div>
     <div class="lastrectangle"> 
-        <div class="registration-form">
-            <h2>Inscription</h2>
-            <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
-              <div class="form-group">
-                <input type="text" id="firstName" name="firstName" placeholder="Prénom" ngModel required>
-              </div>
-              <div class="form-group">
-                <input type="text" id="lastName" name="lastName" placeholder="Nom" ngModel required>
-              </div>
-              <div class="form-group">
-                <input type="text" id="adresse" name="adresse" placeholder="adresse" ngModel required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" ngModel required>
-              </div>
-              <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Mot de pass" ngModel required>
-              </div>
-              <div class="form-group">
-                <input type="number" id="age" name="age" placeholder="Age" ngModel required>
-              </div>
-              <div class="form-group">
-                <select name="gender" ngModel required>
-                  <option value="" disabled selected>Sexe</option>
-                  <option value="male">Homme</option>
-                  <option value="female">Femme</option>
-              
-                </select>
-              </div>
-              <div class="form-group">
-                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Numéro de téléphone" ngModel required>
-              </div>
-              <button type="submit">S'inscrire</button>
-            </form>
+      <div class="registration-form">
+        <h2>Inscription</h2>
+        <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
+          <div class="form-group">
+            <input type="text" id="firstName" name="firstName" placeholder="Prénom" [(ngModel)]="user.firstname" required>
           </div>
+          <div class="form-group">
+            <input type="text" id="lastName" name="lastName" placeholder="Nom" [(ngModel)]="user.lastname" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="adresse" name="adresse" placeholder="Adresse" [(ngModel)]="user.adresse" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email" [(ngModel)]="user.email"  required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Mot de passe" [(ngModel)]="user.password" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="age" name="age" placeholder="Age" [(ngModel)]="user.age" required>
+          </div>
+          <div class="form-group">
+            <select name="gender" [(ngModel)]="user.gender" required>
+              <option value="" disabled selected>Sexe</option>
+              <option value="male">Homme</option>
+              <option value="female">Femme</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Numéro de téléphone" [(ngModel)]="user.phonenumber" required>
+          </div>
+          <button type="submit">S'inscrire</button>
+        </form>
+        <div *ngIf="successMessage" class="success-message">
+          {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </main>

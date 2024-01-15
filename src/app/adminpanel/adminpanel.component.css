@@ -1,0 +1,5 @@
+.btn{
+    background-color: #006d77;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}

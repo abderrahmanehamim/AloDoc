@@ -1,38 +1,31 @@
-<!-- appointment-form.component.html -->
 <div class="container mt-4">
-    <h2>Create Appointment</h2>
-  
-    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="dateappoint">Date:</label>
-        <input type="date" id="dateappoint" formControlName="dateappoint" class="form-control" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="timeappoint">Time:</label>
-        <input type="time" id="timeappoint" formControlName="timeappoint" class="form-control" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="acceptance">Acceptance:</label>
-        <input type="text" id="acceptance" formControlName="acceptance" class="form-control" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="doctorId">Doctor:</label>
-        <select id="doctorId" formControlName="doctorId" class="form-control" required>
-          <option *ngFor="let doctor of doctors" [value]="doctor.id_doctor">{{ doctor.name }}</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
-        <label for="patientId">Patient:</label>
-        <select id="patientId" formControlName="patientId" class="form-control" required>
-          <option *ngFor="let patient of patients" [value]="patient.id_patient">{{ patient.firstname }} {{ patient.lastname }}</option>
-        </select>
-      </div>
-  
-      <button type="submit" class="btn btn-primary">Create Appointment</button>
-    </form>
-  </div>
-  
+  <h2>Schedule Appointment</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="dateappoint">Date:</label>
+      <input type="date" id="dateappoint" name="dateappoint" class="form-control" [(ngModel)]="dateappoint" required>
+    </div>
+
+    <div class="form-group">
+      <label for="timeappoint">Time:</label>
+      <input type="time" id="timeappoint" name="timeappoint" class="form-control" [(ngModel)]="timeappoint" required>
+    </div>
+
+    <div class="form-group">
+      <label for="selectedDoctor">Doctor:</label>
+      <select id="selectedDoctor" name="selectedDoctor" class="form-control" [(ngModel)]="selectedDoctorId" required>
+        <option *ngFor="let doctor of doctors" [value]="doctor.idDoctor">{{ doctor.name }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="selectedPatient">Patient:</label>
+      <select id="selectedPatient" name="selectedPatient" class="form-control" [(ngModel)]="selectedPatientId" required>
+        <option *ngFor="let patient of patients" [value]="patient.idpatient">{{ patient.firstname }} {{ patient.lastname }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Appointment</button>
+  </form>
+</div>

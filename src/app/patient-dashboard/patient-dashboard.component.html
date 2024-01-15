@@ -24,7 +24,7 @@
 									<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
 								</ol>
 							</nav>
-							<h2 class="breadcrumb-title">Dashboard</h2>
+							<h2 class="breadcrumb-title">Dashboard patient {{ patient?.idpatient }}</h2>
 						</div>
 					</div>
 				</div>
@@ -42,14 +42,14 @@
 							<div class="profile-sidebar">
 								<div class="widget-profile pro-widget-content">
 									<div class="profile-info-widget">
-										<a href="#" class="booking-doc-img">
-											<img src="assets/img/patients/patient.jpg" alt="User Image">
+										<a href="#" class="booking-doc-img" *ngIf="patient">
+											<img src="/assets/img/patients/patient.jpg" >
 										</a>
 										<div class="profile-det-info">
-											<h3>Richard Wilson</h3>
+											<h3>{{ patient?.firstname }},{{ patient?.lastname }}</h3>
 											<div class="patient-details">
-												<h5><i class="fas fa-birthday-cake"></i> 24 Jul 1983, 38 years</h5>
-												<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Newyork, USA</h5>
+												<h5><i class="fas fa-birthday-cake"></i> {{ patient?.gender }},{{ patient?.age }}</h5>
+												<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i>{{ patient?.adresse }}</h5>
 											</div>
 										</div>
 									</div>
@@ -66,17 +66,12 @@
 										
 										
 											<li>
-												<a href="/patientsettings">
+												<a href="/RechercherMed">
 													<i class="fas fa-user-cog"></i>
-													<span>Profile Settings</span>
+													<span>Rechercher Médcin</span>
 												</a>
 											</li>
-											<li>
-												<a href="/Patientchangepassword">
-													<i class="fas fa-lock"></i>
-													<span>Change Password</span>
-												</a>
-											</li>
+											
 											<li>
 												<a href="/Connexion">
 													<i class="fas fa-sign-out-alt"></i>
@@ -106,53 +101,46 @@
 										</ul>
 									</nav>
 									<!-- /Tab Menu -->
-									
-									<!-- Tab Content -->
-									<div class="tab-content pt-0">
-										
-                                        <div class="tab-pane fade show active" id="upcoming-appointments">
-                                            <div class="card card-table mb-0">
-                                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover table-center mb-0">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Doctor</th>
-                                                                    <th>Date</th>
-                                                                    <th>Booking Date</th>
-                                                                    <th>Status</th>
-                                                             
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="doctor-profile.html" class="avatar avatar-sm mr-2">
-                                                                                <img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="doctor-profile.html">Dr. Ruby Perrin <span>Dental</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>9 Nov 2019 <span class="d-block text-info">7.00 PM</span></td>
-                                                                    <td>8 Nov 2019</td>
-                                                                    <td><span class="badge badge-pill bg-success-light">Confirmed</span></td>
-                                                                  
-                                                                </tr>
-                                                            
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+							
+								<!-- Tab Content -->
+<div class="tab-content pt-0">
+    <div class="tab-pane fade show active" id="upcoming-appointments">
+        <div class="card card-table mb-0">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0">
+                        <thead>
+                            <tr>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Acceptance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let appointment of appointments">
+                                <td>
+                                    <h2 class="table-avatar">
+                                        <a class="avatar avatar-sm mr-2" [routerLink]="['/profilemed', appointment.doctor?.idDoctor]">
+                                        </a>
+                                        <a [routerLink]="['/profilemed', appointment.doctor?.idDoctor]">{{ appointment.doctor?.name || 'N/A' }} <span>{{ appointment.doctor?.specialite || 'N/A' }}</span></a>
+                                    </h2>
+                                </td>
+                                <td>{{ appointment.dateappoint | date:'mediumDate' }}<span class="d-block text-info">{{ parseTime(appointment.timeappoint) }}</span></td>
+                                <td>{{ parseTime(appointment.timeappoint) }}</td>
+								<td [style.color]="appointment.acceptance === 'accepted' ? 'green' : (appointment.acceptance === 'refused' ? 'red' : 'black')">
+									{{ appointment.acceptance }}
+								  </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tab Content -->
 
-										
-										
-										
-									</div>
-									<!-- Tab Content -->
-									
 								</div>
 							</div>
 						</div>

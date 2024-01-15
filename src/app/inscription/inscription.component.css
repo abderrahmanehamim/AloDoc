@@ -104,4 +104,12 @@ flex-shrink: 0;
     background-color:var(--secondary3-color);
     color: #006d77;
   }
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
   
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }

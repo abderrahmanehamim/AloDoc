@@ -10,8 +10,7 @@
           <th>Date</th>
           <th>Time</th>
           <th>Acceptance</th>
-          <th>Doctor Name</th>
-          <th>Patient Name</th>
+
           <th>Actions</th>
         </tr>
       </thead>
@@ -21,8 +20,7 @@
           <td>{{ appointment.dateappoint | date:'mediumDate' }}</td>
           <td>{{ parseTime(appointment.timeappoint) }}</td>
           <td>{{ appointment.acceptance }}</td>
-          <td>{{ appointment.doctor?.name || 'N/A' }}</td>
-          <td>{{ appointment.patient?.firstname + ' ' + appointment.patient?.lastname || 'N/A' }}</td>
+         
           <td>
             <button class="btn btn-danger btn-sm" (click)="deleteAppointment(appointment.idappoint)">Delete</button>
           </td>

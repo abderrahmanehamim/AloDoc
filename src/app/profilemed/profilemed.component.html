@@ -1,128 +1,77 @@
 <main>
-  		<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-12 col-12">
-							<nav aria-label="breadcrumb" class="page-breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="/home">Home</a></li>
-                  <li class="breadcrumb-item"><a href="/RechercherMed">RechercherMedcin</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Profile Médcin</li>
-								</ol>
-							</nav>
-							<h2 class="breadcrumb-title">Profile Médcin</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /Breadcrumb -->
- <div class="Profilecontent">
-
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-12 col-12">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item"><a href="/RechercherMed">RechercherMedcin</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Profile Médcin</li>
+            </ol>
+          </nav>
+          <h2 class="breadcrumb-title">Profile Médcin</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Breadcrumb -->
+  <div class="Profilecontent">
     <section class="infopersonnel">
-            <h1 class="infopersonnel-title">Information Personnel</h1>
+      <h1 class="infopersonnel-title">Information Personnel</h1>
 
-            <img class="infopersonnel-photo" [src]="housingLocation?.photo" alt="Image de Profile  de {{housingLocation?.name}}">
+      <img class="infopersonnel-photo" src="/assets/img/doctors/doctor.jpg" alt="Image de Profile de {{doctor?.name}}">
 
-            <h3 class="infopersonnel-rdvnumber"></h3>
-            <h2 class="infopersonnel-name">{{housingLocation?.title }},{{ housingLocation?.name }}</h2>
+      <h3 class="infopersonnel-rdvnumber"></h3>
+      <h2 class="infopersonnel-name">{{doctor?.title}}, {{doctor?.name}}</h2>
 
-            <p class="infopersonnel-specialité">{{ housingLocation?.specialite}}</p>
+      <p class="infopersonnel-specialité">{{doctor?.specialite}}</p>
 
-             <div class="infopersonnel-acces">
-             </div>
+      <div class="infopersonnel-acces">
+      </div>
     </section>
     <div class="line"></div>
     <section class="indicationdetails">
-        <h1 class="indicationdetails-title">Indications / Détail Accès</h1>
-        <div  class="indicationdetails-description">
-            <div class="row">
-                <div class="cell">
-                  {{housingLocation?.adresse}}
-                </div>
-                <div class="cell">
-                  {{housingLocation?.city}}
-                </div>
-              </div>
-              <div class="row">
-                <div class="cell">
-                  {{housingLocation?.numtele}}
-                </div>
-                <div class="cell">
-                  {{housingLocation?.numcabinet}}
-                </div>
-              </div>
-            </div>
-
+      <h1 class="indicationdetails-title">Indications / Détail Accès</h1>
+      <div class="indicationdetails-description">
+        <div class="row">
+          <div class="cell">
+            {{doctor?.adresse}}
+          </div>
+          <div class="cell">
+            {{doctor?.city}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            {{doctor?.numtele}}
+          </div>
+          <div class="cell">
+            {{doctor?.numcabinet}}
+          </div>
+        </div>
+      </div>
     </section>
     <div class="line2"></div>
     <section class="actes">
       <h1 class="indicationdetails-title">Soins et actes</h1>
       <div class="actepadding">
-      <div class="button-grid">
-        <div class="button-item" *ngFor="let acte of housingLocation?.actes; let i = index">
-          <a class="badge badge-secondary p-2 mb-1" href="{{ acte }}" style="min-width: 88px; height: 43px; font-size: 0.9em; background-color: #006D77;">
-            {{ acte }}
-          </a>
+        <div class="button-grid">
+          <div class="button-item" *ngFor="let acte of doctor?.actes; let i = index">
+            <a class="badge badge-secondary p-2 mb-1" href="{{ acte }}" style="min-width: 88px; height: 43px; font-size: 0.9em; background-color: #006D77;">
+              {{ acte }}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </section>
     <div class="line3"></div>
-    
     <div class="line4"></div>
- </div>
-<div class="rdvprofile">
-  <button type="button" class="rdv btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Réservez-Rdv
-  </button>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">{{housingLocation?.title }},{{housingLocation?.name}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <section class="listing-apply">
-            <h4 class="section-heading">{{ housingLocation?.title }},{{ housingLocation?.name }} vous confirmera votre rendez-vous dès que possible</h4>
-
-            <form [formGroup]="applyForm" (submit)="submitApplication()">
-              <input id="first-name" type="text" formControlName="firstName" placeholder="Nom" class="form-control mb-2">
-              <input id="last-name" type="text" formControlName="lastName" placeholder="Prénom" class="form-control mb-2">
-              <input id="email" type="email" formControlName="email" placeholder="Email" class="form-control mb-2">
-              <input id="Phonenumber" type="text" formControlName="Phonenumber" placeholder="Phonenumber" class="form-control mb-2">
-              <!-- Date Input -->
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Date</span>
-                </div>
-                <input type="date" formControlName="appointmentDate" class="form-control">
-              </div>
-              
-              <!-- Time Input -->
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Heure</span>
-                </div>
-                <input type="time" formControlName="appointmentTime" class="form-control">
-              </div>
-              
-              <button type="submit" class="rdv primary">Confirmer le Rendez-Vous</button>
-            </form>
-          </section>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        </div>
-      </div>
-    </div>
   </div>
-  
-
-
-</div>
+  <div class="rdvprofile">
+    <button type="button" class="rdv btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Réservez-Rdv
+    </button>
+  </div>
 </main>

@@ -8,27 +8,32 @@
           <th>First Name</th>
           <th>Last Name</th>
           <th>Email</th>
-          <th>Password</th>
+        
           <th>Age</th>
           <th>Address</th>
           <th>Gender</th>
           <th>Phone Number</th>
           <th>Actions</th>
+          <th>patientProfile<th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let patient of patients">
-          <td>{{ patient.idPatient }}</td>
+          <td>{{ patient.idpatient }}</td>
           <td>{{ patient.firstname }}</td>
           <td>{{ patient.lastname }}</td>
           <td>{{ patient.email }}</td>
-          <td>{{ patient.password }}</td>
+         
           <td>{{ patient.age }}</td>
           <td>{{ patient.adresse }}</td>
           <td>{{ patient.gender }}</td>
           <td>{{ patient.phonenumber }}</td>
           <td>
-            <button class="btn btn-danger btn-sm" (click)="deletePatient(patient.idPatient)">Delete</button>
+            <button class="btn btn-danger btn-sm" (click)="deletePatient(patient.idpatient)">Delete</button>
+
+          </td>
+          <td>
+             <button class="btn btn-info btn-sm" [routerLink]="['/patientDashboard', patient.idpatient]" >afficher profile</button>
           </td>
         </tr>
       </tbody>

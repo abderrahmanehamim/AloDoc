@@ -19,12 +19,16 @@
   
         <div class="form-group">
           <label for="specialite">Speciality</label>
-          <input type="text" class="form-control" id="specialite" [(ngModel)]="newDoctor.specialite" name="specialite" required>
+          <select class="form-control" id="specialite" [(ngModel)]="newDoctor.specialite" name="specialite" required>
+            <option *ngFor="let specialty of specialties" [value]="specialty">{{ specialty }}</option>
+          </select>
         </div>
   
         <div class="form-group">
           <label for="city">City</label>
-          <input type="text" class="form-control" id="city" [(ngModel)]="newDoctor.city" name="city" required>
+          <select class="form-control" id="city" [(ngModel)]="newDoctor.city" name="city" required>
+            <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+          </select>
         </div>
   
         <div class="form-group">
@@ -32,15 +36,21 @@
           <input type="text" class="form-control" id="title" [(ngModel)]="newDoctor.title" name="title" required>
         </div>
   
-        <div class="form-group">
-          <label for="photo">Photo URL</label>
-          <input type="text" class="form-control" id="photo" [(ngModel)]="newDoctor.photo" name="photo">
-        </div>
+       
   
         <div class="form-group">
           <label for="actes">List of Acts</label>
-          <input type="text" class="form-control" id="actes" [(ngModel)]="newDoctor.actes" name="actes" placeholder="Enter acts separated by commas">
+          <input type="text" class="form-control" id="actes" [(ngModel)]="actToAdd" name="actToAdd" placeholder="Enter act">
+          <button type="button" class="btn btn-primary mt-2" (click)="addAct()">Add Act</button>
         </div>
+        
+        <div class="form-group">
+          <label>Selected Acts</label>
+          <div class="d-flex flex-wrap">
+            <span class="badge badge-secondary m-1" *ngFor="let act of newDoctor.actes">{{ act }} <button type="button" class="btn btn-link btn-sm" (click)="removeAct(act)">x</button></span>
+          </div>
+        </div>
+        
   
         <div class="form-group">
           <label for="cabinet">Cabinet</label>

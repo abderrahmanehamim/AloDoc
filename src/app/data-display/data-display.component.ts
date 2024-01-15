@@ -35,7 +35,7 @@ export class DataDisplayComponent implements OnInit {
     this.error = false;
     console.log('Fetching data...');
 
-    // Fetch data in parallel
+  
     forkJoin([
       this.doctorService.getAllDoctors(),
       this.patientService.getAllPatients(),
@@ -46,7 +46,7 @@ export class DataDisplayComponent implements OnInit {
         this.patients = patients;
         this.appointments = appointments;
 
-        // Organize appointments by doctor ID
+        
         this.organizeAppointmentsByDoctor();
 
         this.loading = false;
@@ -72,7 +72,7 @@ export class DataDisplayComponent implements OnInit {
     this.doctorService.deleteDoctor(doctorId).subscribe(
       () => {
         console.log(`Doctor with ID ${doctorId} deleted successfully.`);
-        // Refresh the data after deletion
+        
         this.fetchData();
       },
       error => {

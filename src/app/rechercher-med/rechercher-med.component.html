@@ -1,50 +1,40 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-12 col-12">
+        <nav aria-label="breadcrumb" class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rechercher Médcin</li>
+          </ol>
+        </nav>
+        <h2 class="breadcrumb-title">Rechercher Médcin</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
 
-   			
-			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-12 col-12">
-							<nav aria-label="breadcrumb" class="page-breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="/home">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Rechercher Médcin</li>
-								</ol>
-							</nav>
-							<h2 class="breadcrumb-title">Rechercher Médcin</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /Breadcrumb -->
-			
-   <section class="content">
-          <section class="rectanglerecherche">
-            <div class="container">
-              <div class="row">
-                <div class="select-box">
+<section class="content">
+  <section class="rectanglerecherche">
+    <div class="container">
+      <div class="row">
+        <div class="select-box">
+          <input type="text" class="form-control" placeholder="Filtrer par spécialité" #filter>
+        </div>
+        <div class="select-box"></div>
+        <div class="select-box"></div>
+        <button class="button" (click)="filterResults(filter.value)">Rechercher</button>
+      </div>
+    </div>
+  </section>
+  <div class="linerecherche"></div>
 
-                  <input type="text" class="form-control" placeholder="Filtrer par spécialité" #filter>
-
-                </div>
-                <div class="select-box">
-
-                </div>
-                <div class="select-box">
-
-              </div>
-                <button class="button" (click)="filterResults(filter.value)">Rechercher</button>
-              </div>
-            </div>
-          </section>
-          <div class="linerecherche">
-          </div>
-
-            <div class="results">
-              <app-housing-location
-                *ngFor="let housingLocation of filteredprofileList"
-                [housingLocation]="housingLocation"
-              ></app-housing-location>
-            </div>
-    </section>
-   
+  <div class="results">
+    <app-minidoctorview
+      *ngFor="let doctor of filteredDoctorList"
+      [doctor]="doctor"
+    ></app-minidoctorview>
+  </div>
+</section>
